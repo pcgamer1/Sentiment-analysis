@@ -30,10 +30,10 @@ def preprocess_reviews(reviews):
 reviews_train_clean = preprocess_reviews(reviews_train)
 reviews_test_clean = preprocess_reviews(reviews_test)
 
-```python
+```
 
 **One-Hot encoding all the reviews using count-vectorizer:**
-```
+```python
 
 from sklearn.feature_extraction.text import CountVectorizer
 cv = CountVectorizer(binary=True)
