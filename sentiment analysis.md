@@ -6,7 +6,7 @@ Created on Thu Feb 28 00:02:55 2019
 """
 
 Loading Data : 
-```
+```python
 reviews_train = []
 for line in open('C:\\Users\\Sarthak\\.spyder-py3\\movie_data\\full_train.txt', 'r',errors='ignore'):
     reviews_train.append(line.strip())
@@ -16,7 +16,7 @@ for line in open('C:\\Users\\Sarthak\\.spyder-py3\\movie_data\\full_test.txt', '
     
  ```
 Cleaning Data:
-```
+```python
 
 import re
 
@@ -30,7 +30,7 @@ def preprocess_reviews(reviews):
 reviews_train_clean = preprocess_reviews(reviews_train)
 reviews_test_clean = preprocess_reviews(reviews_test)
 
-```
+```python
 
 One-Hot encoding all the reviews using count-vectorizer:
 ```
@@ -44,7 +44,7 @@ X_test = cv.transform(reviews_test_clean)
 ```
 
 Building Classifier:
-```
+```python
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
@@ -56,7 +56,7 @@ X_train, X_val, y_train, y_val = train_test_split(X, target, train_size = 0.75)
 ```
 
 Trying different values of the learning rate to check which one gives highest accuracy score:
-```
+```python
 
 for c in [0.01, 0.05, 0.25, 0.5, 1]:
     
