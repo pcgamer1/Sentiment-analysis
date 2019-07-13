@@ -5,7 +5,7 @@ Created on Thu Feb 28 00:02:55 2019
 @author: Sarthak
 """
 
-Loading Data : 
+**Loading Data :** 
 ```python
 reviews_train = []
 for line in open('C:\\Users\\Sarthak\\.spyder-py3\\movie_data\\full_train.txt', 'r',errors='ignore'):
@@ -15,7 +15,7 @@ for line in open('C:\\Users\\Sarthak\\.spyder-py3\\movie_data\\full_test.txt', '
     reviews_test.append(line.strip())
     
  ```
-Cleaning Data:
+**Cleaning Data:**
 ```python
 
 import re
@@ -32,7 +32,7 @@ reviews_test_clean = preprocess_reviews(reviews_test)
 
 ```python
 
-One-Hot encoding all the reviews using count-vectorizer:
+**One-Hot encoding all the reviews using count-vectorizer:**
 ```
 
 from sklearn.feature_extraction.text import CountVectorizer
@@ -43,7 +43,7 @@ X_test = cv.transform(reviews_test_clean)
 
 ```
 
-Building Classifier:
+**Building Classifier:**
 ```python
 
 from sklearn.linear_model import LogisticRegression
@@ -55,7 +55,7 @@ X_train, X_val, y_train, y_val = train_test_split(X, target, train_size = 0.75)
 
 ```
 
-Trying different values of the learning rate to check which one gives highest accuracy score:
+**Trying different values of the learning rate to check which one gives highest accuracy score:**
 ```python
 
 for c in [0.01, 0.05, 0.25, 0.5, 1]:
